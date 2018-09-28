@@ -10,15 +10,23 @@
     font-size: 30px;
 }
 
+.small-panel {
+    height: 180px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;   /* <---- NEW    */
+    background: white;
+    color: grey;
+    font-weight: 600;
+    font-size: 30px;
+    border: 1px solid black;
+}
+
 
 #upper_block{
     display: flex;
     justify-content: center;
-}
-
-#fleet_size, #cars_to_check{
-    display: block;
-    margin: 10px !important; 
 }
 
 #lower_block {
