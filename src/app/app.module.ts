@@ -5,6 +5,7 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SelectViewComponent } from './select-view/select-view.component';
+import { PartViewComponent } from './part-view/part-view.component';
 import { MainViewComponent } from './main-view/main-view.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CompareViewComponent } from './compare-view/compare-view.component';
@@ -18,6 +19,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
     SelectViewComponent,
     MainViewComponent,
     CompareViewComponent
+    PartViewComponent,
   ],
   imports: [
     BrowserModule,
