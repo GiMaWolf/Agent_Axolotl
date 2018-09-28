@@ -14,3 +14,12 @@
     display: flex;
     align-items: flex-start;
 }
+
+.critical{
+    background-color: #ff2d37;
+    color: white;
+}
+
+.criticalCheckbox{
+    border: 2px solid white !important;
+}

@@ -10,6 +10,7 @@ import { MainViewComponent } from './main-view/main-view.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CompareViewComponent } from './compare-view/compare-view.component';
 import { RestService } from './shared/rest.service';
+import { FormsModule } from '@angular/forms'; 
 
 import { HighchartsChartModule } from 'highcharts-angular';
 
@@ -25,7 +26,8 @@ import { HighchartsChartModule } from 'highcharts-angular';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    FormsModule
   ],
   providers: [RestService, HttpClientModule],
   bootstrap: [AppComponent]

@@ -174,7 +174,7 @@
           <option value="audi">Median</option>
         </select>    
 
-        <a class="waves-effect waves-light btn mybtn"><i class="material-icons right">keyboard_arrow_right</i>Compare-View</a>
+        <a class="waves-effect waves-light btn mybtn" (click)="compare()"><i class="material-icons right" >keyboard_arrow_right</i>Compare-View</a>
       </div>
       <div class="card">
         
@@ -191,158 +191,24 @@
             </thead>
     
             <tbody>
-              <tr>
-                <td>VF1RFA00257138714</td>
-                <td>23.743102876650337</td>
-                <td>57.27104796211535</td>
-                <td>2173.5360040852347</td>
-                <td>235.85555477088076</td>
+              <tr *ngFor="let vehicle of vehicles" [ngClass]="{'critical': (vehicle.Critical == 1)}">
+                <td>{{vehicle.VIN}}</td>
+                <td>{{vehicle.Fuel_Pump_Delivery | number:'1.2-4'}}</td>
+                <td>{{vehicle.Fuel_Temperature_In_Rail | number:'1.2-4'}}</td>
+                <td>{{vehicle.Engine_Speed | number:'1.2-4'}}</td>
+                <td>{{vehicle.Fuel_Pressure | number:'1.2-4'}}</td>
                 <td> 
                     <form action="#">
                         <p>
                           <label>
-                            <input type="checkbox" />
-                            <span></span>
-                          </label>
-                        </p>
-                    </form>
-                </td>
-              </tr>
-              <tr>
-                <td>VF1RFA00257138740</td>
-                <td>24.24121026202519</td>
-                <td>50.23744120280331</td>
-                <td>2349.405887103715</td>
-                <td>236.47265937699524</td>
-                <td> 
-                    <form action="#">
-                        <p>
-                          <label>
-                            <input type="checkbox" />
+                            <input type="checkbox" [ngClass]="{'criticalCheckbox': (vehicle.Critical == 1)}" [(ngModel)]="vehicle.compare" [ngModelOptions]="{standalone: true}"/>
                             <span></span>
                           </label>
                         </p>
                     </form>
                   </td>
-              </tr>
-              <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td> 
-                      <form action="#">
-                          <p>
-                            <label>
-                              <input type="checkbox" />
-                              <span></span>
-                            </label>
-                          </p>
-                      </form>
-                    </td>
-              </tr>
-              <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td> 
-                      <form action="#">
-                          <p>
-                            <label>
-                              <input type="checkbox" />
-                              <span></span>
-                            </label>
-                          </p>
-                      </form>
-                    </td>
-              </tr>
-              <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td> 
-                      <form action="#">
-                          <p>
-                            <label>
-                              <input type="checkbox" />
-                              <span></span>
-                            </label>
-                          </p>
-                      </form>
-                    </td>
-              </tr>
-              <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td> 
-                      <form action="#">
-                          <p>
-                            <label>
-                              <input type="checkbox" />
-                              <span></span>
-                            </label>
-                          </p>
-                      </form>
-                    </td>
-              </tr>
-              <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td> 
-                      <form action="#">
-                          <p>
-                            <label>
-                              <input type="checkbox" />
-                              <span></span>
-                            </label>
-                          </p>
-                      </form>
-              </tr>
-              <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td> 
-                      <form action="#">
-                          <p>
-                            <label>
-                              <input type="checkbox" />
-                              <span></span>
-                            </label>
-                          </p>
-                      </form>
-                    </td>
-              </tr>
-              <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td> 
-                      <form action="#">
-                          <p>
-                            <label>
-                              <input type="checkbox" />
-                              <span></span>
-                            </label>
-                          </p>
-                      </form>
-                    </td>
-              </tr>
+            </tr>
+              
 
             </tbody>
         </table>

@@ -7,9 +7,33 @@ import { map, catchError } from 'rxjs/operators';
 @Injectable()
 export class RestService {
 
-  private url: string = 'http://localhost:5000';
+  private url: string = 'https://backendaxolotl.herokuapp.com';
 
   constructor(public http: HttpClient) { }
+
+  getMainViewData(): Observable<any>{
+    return this.http.get(this.url + "/fleet").pipe(
+      map((res: Response) => {
+        return res;
+      })
+    )
+  }
+
+  getSelectViewData(): Observable<any>{
+    return this.http.get(this.url + "/components").pipe(
+      map((res: Response) => {
+        return res;
+      })
+    )
+  }
+
+  getPartViewData(): Observable<any>{
+    return this.http.get(this.url + "/components/fuel-pump").pipe(
+      map((res: Response) => {
+        return res;
+      })
+    )
+  } 
 
   getComponentDetails(vehicles: string): Observable<any>{
     return this.http.get(this.url + "/components/fuel-pump/details?vehicles=" + vehicles).pipe(
