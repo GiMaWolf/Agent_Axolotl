@@ -1,0 +1,35 @@
+.big-panel {
+    height: 200px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;   /* <---- NEW    */
+    background: #ffa500;
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.small-panel {
+    height: 180px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;   /* <---- NEW    */
+    background: white;
+    color: grey;
+    font-weight: 600;
+    font-size: 30px;
+    border: 1px solid black;
+}
+
+
+#upper_block{
+    display: flex;
+    justify-content: center;
+}
+
+#lower_block {
+    display: flex;
+    justify-content: space-between;
+  }
