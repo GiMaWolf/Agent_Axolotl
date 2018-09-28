@@ -1,4 +1,4 @@
-from partViewConvert import PartViewConvert
+from scipts.partViewConvert import PartViewConvert
 import pandas as pd
 import json
 import simplejson

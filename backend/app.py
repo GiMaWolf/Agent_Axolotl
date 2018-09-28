@@ -2,17 +2,17 @@ from flask import Flask, request, redirect, url_for
 from threading import Timer
 from flask.ext.cors import CORS
 
-#from MainViewConvert import MainViewConvert
-#from SelectViewConvert import SelectViewConvert
+from scipts.mainViewConvert import MainViewConvert
+from scipts.selectViewConvert import SelectViewConvert
 from scipts.partViewConvert import PartViewConvert
 from scipts.compareViewConvert import CompareViewConvert
 
 app = Flask(__name__)
 CORS(app)
 
-#mainView = MainViewConvert()
-#selectView = SelectViewConvert()
-partView = PartViewConvert()
+mainView = MainViewConvert()
+selectView = SelectViewConvert()
+partView = PartViewConvert('pump')
 compareView = CompareViewConvert()
 
 @app.route('/fleet', methods=['GET'])
