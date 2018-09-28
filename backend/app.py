@@ -12,7 +12,7 @@ CORS(app)
 
 #mainView = MainViewConvert()
 #selectView = SelectViewConvert()
-partView = PartViewConvert()
+partView = PartViewConvert("pump")
 #compareView = CompareViewConvert()
 
 @app.route('/fleet', methods=['GET'])

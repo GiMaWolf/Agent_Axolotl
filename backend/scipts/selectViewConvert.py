@@ -6,7 +6,7 @@ import simplejson
 class SelectViewConvert():
 
     def __init__(self):
-        partViewConvert = PartViewConvert() 
+        partViewConvert = PartViewConvert("pump") 
         averages = partViewConvert.main_method("fuel_pump")
         temp = json.loads(averages)
         # for item in averages:
