@@ -1,5 +1,27 @@
 .big-panel {
-height: 200px;
-width: auto;
-
+    height: 200px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;   /* <---- NEW    */
+    background: #ffa500;
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
 }
+
+
+#upper_block{
+    display: flex;
+    justify-content: center;
+}
+
+#fleet_size, #cars_to_check{
+    display: block;
+    margin: 10px !important; 
+}
+
+#lower_block {
+    display: flex;
+    justify-content: space-between;
+  }
