@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-select-view',
-  templateUrl: './select-view.component.html',
-  styleUrls: ['./select-view.component.css']
+  selector: 'app-main-view',
+  templateUrl: './main-view.component.html',
+  styleUrls: ['./main-view.component.css']
 })
-export class SelectViewComponent implements OnInit {
+export class MainViewComponent implements OnInit {
 
   constructor() { }
 
