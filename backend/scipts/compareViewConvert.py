@@ -33,7 +33,7 @@ class CompareViewConvert():
                 result_var = {var: []}
                 for var_entry in df[var]:
                     if not(math.isnan(var_entry)):
-                        element_to_add = {'value': var_entry,  'timestamp':  + df['timestamp'][counter]}
+                        element_to_add = [df['timestamp'][counter], var_entry]
                         result_var[var].append(element_to_add)
                         counter +=1
                 result['series'].append(result_var)
