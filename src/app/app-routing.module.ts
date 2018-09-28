@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SelectViewComponent } from './select-view/select-view.component';
 import { MainViewComponent } from './main-view/main-view.component'
+import { CompareViewComponent } from './compare-view/compare-view.component';
 
 const routes: Routes = [
     {
@@ -23,6 +24,10 @@ const routes: Routes = [
     {
         path: 'mainView',
         component: MainViewComponent
+    },
+    {
+        path: 'compareView',
+        component: CompareViewComponent
     }
 ];
 
