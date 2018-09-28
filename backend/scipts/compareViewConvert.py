@@ -36,6 +36,7 @@ class CompareViewConvert():
                         element_to_add = [df['timestamp'][counter], var_entry]
                         result_var[var].append(element_to_add)
                         counter +=1
+                result_var[var].sort(key=lambda x: [x[0]])
                 result['series'].append(result_var)
         return result
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RestService } from '../shared/rest.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-part-view',
@@ -7,9 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartViewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private restService:RestService, private router:Router) { }
+  
+  public vehicles;
 
   ngOnInit() {
+    this.restService.getPartViewData().subscribe(response => {
+      this.vehicles = response;
+      this.vehicles.forEach(element => {
+        element.compare = false;
+      });      
+      console.log(this.vehicles);
+
+    });
+  }
+
+  compare(){
+    let compareList = "";
+
+    this.vehicles.forEach(element => {
+      if(element.compare){
+        compareList = compareList + ',' +  element.VIN
+      }
+    });
+    this.router.navigate(['/compareView'], { queryParams: { vehicles: compareList } });
+
   }
 
 /** JS for dropdown. this will not work!!!!
