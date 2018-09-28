@@ -38,9 +38,12 @@ class partViewConvert():
         #             result.update({var: self.df[var].mean()})
         result.update({"VIN":vin})
         return result
+    
+    def main_method(self, component):
+        return self.result
 
 
-if __name__ == "__main__":
-    aggr = partViewConvert("test")
+# if __name__ == "__main__":
+#     aggr = partViewConvert("test")
     
 
