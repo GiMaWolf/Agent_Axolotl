@@ -14,7 +14,10 @@ class SelectViewConvert():
         sum_engine_speed = 0
         sum_fuel_temp = 0
         sum_fuel_pressure = 0
+        sum_critical= 0
         for item in temp:
+            if item["Critical"] == 1:
+                sum_critical +=1
             sum_fuel_pump += item["Fuel_Pump_Delivery"]
             sum_engine_speed += item["Engine_Speed"]
             sum_fuel_temp += item["Fuel_Temperature_In_Rail"]
@@ -25,7 +28,9 @@ class SelectViewConvert():
         self.result["Engine_Speed"] = sum_engine_speed/len(temp)
         self.result["Fuel_Temperature_In_Rail"] = sum_fuel_temp/len(temp)
         self.result["Fuel_Pressure"] = sum_fuel_pressure/len(temp)
-        # print(result)
+        self.result["Critical_cars"] = sum_critical
+        self.result["Total_cars"] = len(temp)
+        print(self.result)
 
     def main_method(self):
         return simplejson.dumps(self.result)

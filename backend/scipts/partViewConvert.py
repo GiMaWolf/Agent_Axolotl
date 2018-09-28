@@ -33,6 +33,10 @@ class PartViewConvert():
                     result.update({var:df[var].mean()})
 
         result.update({"VIN":vin})
+        if result["Fuel_Pump_Delivery"] > 25 or result["Engine_Speed"] > 2300 or result["Fuel_Temperature_In_Rail"] > 75 or result["Fuel_Pressure"] > 240:
+            result.update({"Critical":1})
+        else:
+            result.update({"Critical":0})
         return result
     
     def main_method(self, component):
