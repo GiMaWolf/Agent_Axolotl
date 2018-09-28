@@ -1,6 +1,20 @@
+.content{
+    display:flex;
+    margin: 50px;
+}
+
+#left-block {
+    margin-right: 50px;
+}
+
+#right-block{
+    width: 100%;
+}
+
 .big-panel {
     height: 200px;
-    width: auto;
+    width: 48%;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;   /* <---- NEW    */
@@ -10,18 +24,31 @@
     font-size: 30px;
 }
 
+.small-panel {
+    height: 200px;
+    width: 23%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   /* <---- NEW    */
+    background: #ffa500;
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+}
 
 #upper_block{
     display: flex;
     justify-content: center;
 }
 
-#fleet_size, #cars_to_check{
-    display: block;
-    margin: 10px !important; 
-}
-
 #lower_block {
     display: flex;
     justify-content: space-between;
-  }
+}
+
+.card-label{
+    font-size: 18px;
+    display: flex;
+    align-self: flex-end;
+}
