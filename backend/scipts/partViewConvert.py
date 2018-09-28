@@ -2,9 +2,9 @@ import csv
 import argparse
 import pandas as pd
 import os
-class partViewConvert():
+class PartViewConvert():
 
-    def __init__(self, component):
+    def __init__(self):
         self.setup_parts()
         self.result = []
         for root, dirs, files in os.walk(os.getcwd(), topdown=False):
@@ -16,7 +16,7 @@ class partViewConvert():
                     path = os.path.join(root, dir)
                     for file in os.listdir(path):
                         # print(file)
-                        self.result.append(self.getMean(vin,component,os.path.join(path,file)))
+                        self.result.append(self.getMean(vin,os.path.join(path,file)))
                     # for file in os.walk(os.path.join(root,dir)):
                     #     self.getMean(dir[4:],component,os.path.join(root, file))
         print(self.result)
@@ -24,7 +24,7 @@ class partViewConvert():
     def setup_parts(self):
         self.fuel_pump_vars = ['Fuel_Pressure', 'Fuel_Temperature_In_Rail', 'Fuel_Pump_Delivery', 'Engine_Speed']
         
-    def getMean(self, vin, argumentList,file):
+    def getMean(self, vin,file):
         result = {}
         # print(file)
         with open(file) as f:
@@ -44,6 +44,6 @@ class partViewConvert():
 
 
 # if __name__ == "__main__":
-#     aggr = partViewConvert("test")
+#     aggr = PartViewConvert()
     
 
