@@ -1,6 +1,16 @@
 .filterselect{
-    margin: 30px 0;
     display: block;
     width: 25%;
+}
 
+.mybtn{
+    display: inline-block;
+    float: right;
+    margin: 0px 160px;
+    background-color: #ffa500;
+}
+
+.tools{
+    display: flex;
+    align-items: flex-start;
 }
