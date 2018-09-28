@@ -165,31 +165,42 @@
     </div>
   
   
-    <div id="right-block">
-      
-        <div id="pump" class="row s12 blockrow">
-            <div class="col s12 big-panel card"  id="pump_data">
-                <div class="col s3 small-panel"  id="avg_pump_speed">pump speed</div>
-                <div class="col s3 small-panel"  id="avg_fuel_pressure">fuel pressure</div>
-                <div class="col s3 small-panel"  id="avg_fuel_temp">fuel temp</div>
-                <div class="col s3 small-panel"  id="avg_fuel_mass_delivery">fuel mass delivery</div>
+    <div class="right-block">
+        <p class="group-card-title">Pump Control</p>
+        <div class="row s11 blockrow lower_block grouping-card">
+            <div class="small-panel card" id="vehicle_speed">
+              <p>400 X
+                <span class="card-label">Pump Speed</span></p>
             </div>
-          </div>
-      
-          <div id="turbo_charger" class="row s12 blockrow">
-            <div class="col s12 big-panel card" id="turbo_charger_data">
-                <div class="col s3 card white darken-1"  id="turbo_charger_data1">
-                    <div class="card-content grey-text">
-                      <span class="card-title">Title</span>
-                      <p></p>
-                    </div>
-                    <div class="card-action">
-                      <a href="#">link</a>
-                    </div>
-                  </div>
-            </div>
+            <div class="small-panel card" id="engine_speed">
+              <p>2000 %
+                <span class="card-label">Fuel Mass Delivery</span></p>
+              </div>
+            <div class="small-panel card" id="engine_load">
+              <p>63 apm
+                  <span class="card-label">Fuel Pressure</span></p>
+              </div>
+            <div class="small-panel card" id="vehicle_temp">
+              <p>0,77 G
+                  <span class="card-label">Fuel Temperature</span></p>
+              </div>
           </div>
 
+          <p class="group-card-title">Injector Control</p>
+          <div class="row s11 blockrow lower_block grouping-card">
+              <div class="small-panel card" id="vehicle_speed">
+                <p>400 X
+                  <span class="card-label">Fuel Pressure</span></p>
+              </div>
+              <div class="small-panel card" id="engine_speed">
+                <p>2000 %
+                  <span class="card-label">Fuel Temperature</span></p>
+                </div>
+              <div class="small-panel card" id="engine_load">
+                <p>63 apm
+                    <span class="card-label">Number of Injection Pulse</span></p>
+                </div>
+            </div>
 
 
     </div>
