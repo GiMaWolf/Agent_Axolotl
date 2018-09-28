@@ -27,6 +27,7 @@ def get_components_for_selected_view():
 
 @app.route('/components/<string:component>', methods=['GET'])
 def get_single_component_for_part_view(component):
+    print(component)
     return partView.main_method(component)
 
 @app.route('/components/<string:component>/details', methods=['GET'])
