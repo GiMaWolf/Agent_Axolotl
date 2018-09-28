@@ -19,8 +19,6 @@ class PartViewConvert():
                     for file in os.listdir(path):
                         # print(file)
                         self.result.append(self.getMean(vin,os.path.join(path,file)))
-                    # for file in os.walk(os.path.join(root,dir)):
-                    #     self.getMean(dir[4:],component,os.path.join(root, file))
         print(self.result)
     
     def setup_parts(self):
@@ -28,23 +26,21 @@ class PartViewConvert():
         
     def getMean(self, vin,file):
         result = {}
-        # print(file)
         with open(file) as f:
             df = pd.read_csv(f)
             for var in self.fuel_pump_vars:
                 if var in list(df):
                     result.update({var:df[var].mean()})
-        # for var in self.fuel_pump_vars:
-        #     if var in list(self.df):
-        #         if var !='Vehicle_Number':
-        #             result.update({var: self.df[var].mean()})
+
         result.update({"VIN":vin})
+        if result["Fuel_Pump_Delivery"] > 25 or result["Engine_Speed"] > 2300 or result["Fuel_Temperature_In_Rail"] > 75 or result["Fuel_Pressure"] > 240:
+            result.update({"Critical":1})
+        else:
+            result.update({"Critical":0})
         return result
     
     def main_method(self, component):
         return simplejson.dumps(self.result)
 
-# if __name__ == "__main__":
-#     aggr = PartViewConvert()
-    
+
 
