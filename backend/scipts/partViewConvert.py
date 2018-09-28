@@ -2,6 +2,8 @@ import csv
 import argparse
 import pandas as pd
 import os
+import simplejson
+
 class PartViewConvert():
 
     def __init__(self):
@@ -40,8 +42,7 @@ class PartViewConvert():
         return result
     
     def main_method(self, component):
-        return self.result
-
+        return simplejson.dumps(self.result)
 
 # if __name__ == "__main__":
 #     aggr = PartViewConvert()
