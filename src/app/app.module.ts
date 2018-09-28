@@ -19,8 +19,8 @@ import { HighchartsChartModule } from 'highcharts-angular';
     AppComponent,
     SelectViewComponent,
     MainViewComponent,
-    CompareViewComponent
-    PartViewComponent,
+    CompareViewComponent,
+    PartViewComponent
   ],
   imports: [
     BrowserModule,
