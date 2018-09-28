@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SelectViewComponent } from './select-view/select-view.component';
+import { PartViewComponent } from './part-view/part-view.component';
 
 const routes: Routes = [
     {
@@ -14,6 +15,10 @@ const routes: Routes = [
     {
         path: 'selectView',
         component: SelectViewComponent
+    },
+    {
+        path: 'partView',
+        component: PartViewComponent
     }
 ];
 
