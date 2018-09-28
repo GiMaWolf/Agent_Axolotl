@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SelectViewComponent } from './select-view/select-view.component';
 import { PartViewComponent } from './part-view/part-view.component';
+import { MainViewComponent } from './main-view/main-view.component';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -12,7 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [
     AppComponent,
     SelectViewComponent,
-    PartViewComponent
+    PartViewComponent,
+    MainViewComponent
   ],
   imports: [
     BrowserModule,

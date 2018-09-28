@@ -28,3 +28,89 @@ a.brand-logo{
 html{
     background-image: linear-gradient(to bottom right, silver, white);
 }
+
+
+
+
+/*dontknow*/
+.content{
+    display:flex;
+    margin: 50px;
+}
+
+#left-block {
+    margin-right: 50px;
+}
+
+.right-block{
+    width: 100%;
+}
+
+.big-panel {
+    height: 200px;
+    width: 48%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   /* <---- NEW    */
+    background: #ffa500;
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.small-panel {
+    height: 200px;
+    width: 23%;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   /* <---- NEW    */
+    background: #ffa500;
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+#upper_block{
+    display: flex;
+    justify-content: center;
+}
+.lower_block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-label{
+    font-size: 18px;
+    display: flex;
+    align-self: flex-end;
+}
+
+p.small-panel{
+    padding: 0 10px;
+}
+
+.grouping-card{
+    width: 100%;
+    background-color: white;
+    -webkit-box-shadow: -5px 7px 5px -3px rgba(0,0,0,0.15);
+    -moz-box-shadow: -5px 7px 5px -3px rgba(0,0,0,0.15);
+    box-shadow: -5px 7px 5px -3px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: space-between;
+}
+
+/*
+.group-card-title{
+    transform: rotate(270deg);
+    transform-origin: 0% 24%;
+    z-index: -1;
+}*/
+
+.group-card-title{
+margin: 0;
+font-weight: 800;
+color: #ffa500
+}

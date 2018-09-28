@@ -6,8 +6,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SelectViewComponent } from './select-view/select-view.component';
 import { PartViewComponent } from './part-view/part-view.component';
+import { MainViewComponent } from './main-view/main-view.component'
 
 const routes: Routes = [
+    {
+        path: '',
+        component: MainViewComponent
+    },
     {
         path: 'home',
         component: AppComponent
@@ -19,6 +24,10 @@ const routes: Routes = [
     {
         path: 'partView',
         component: PartViewComponent
+    },
+    {
+        path: 'mainView',
+        component: MainViewComponent
     }
 ];
 
