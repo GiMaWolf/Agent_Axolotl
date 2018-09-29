@@ -1,10 +1,9 @@
 <div class="content">
 
     <div id="left-block" align="left">
-        <?xml version="1.0" encoding="utf-8"?>
         <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-           viewBox="0 0 163 307" style="enable-background:new 0 0 163 307;" xml:space="preserve">
+           viewBox="0 0 163 307" style="enable-background:new 0 0 163 307;" xml:space="preserve" width="300">
         <style type="text/css">
           .st0{fill:#BCB3C2;}
           .st1{clip-path:url(#SVGID_2_);fill:#FFA500;}
@@ -160,7 +159,7 @@
               c0.5-0.3,1.1-0.9,0.6-1.8c-0.5-0.8-1.4-0.7-1.9-0.5L105.9,209.9z"/>
           </g>
         </g>
-        <g id="Motor">
+        <g id="Motor" class="pointer">
           <path class="st17" d="M30,96c0,0,46-56,115-4c14-73-14.9-89-58-89C46,3,16,14,30,96z"/>
           <rect x="78.3" y="15" class="st18" width="14.9" height="31.5"/>
           <rect x="97.5" y="15" class="st18" width="23.6" height="14"/>
@@ -194,20 +193,20 @@
         <p class="group-card-title">Pump Control</p>
         <div class="row s11 blockrow lower_block grouping-card">
             <div class="small-panel card" id="vehicle_speed">
-              <p>400 X
+              <p>{{this.data.Engine_Speed/2 | number:'1.0-0'}}
                 <span class="card-label">Pump Speed</span></p>
             </div>
             <div class="small-panel card" id="engine_speed">
-              <p>2000 %
-                <span class="card-label">Fuel Mass Del.</span></p>
+              <p>{{this.data.Fuel_Pump_Delivery | number:'1.2-2'}} mg/s
+                <span class="card-label">Fuel Mass Delivery</span></p>
               </div>
             <div class="small-panel card" id="engine_load">
-              <p>63 apm
+              <p>{{this.data.Fuel_Pressure| number:'1.0-0'}}
                   <span class="card-label">Fuel Pressure</span></p>
               </div>
             <div class="small-panel card" id="vehicle_temp">
-              <p>0,77 G
-                  <span class="card-label">Fuel Temp.</span></p>
+              <p>{{this.data.Fuel_Temperature_In_Rail | number:'1.0-0'}}°C
+                  <span class="card-label">Fuel Temperature</span></p>
               </div>
           </div>
 

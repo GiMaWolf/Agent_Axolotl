@@ -156,7 +156,7 @@
               c0.5-0.3,1.1-0.9,0.6-1.8c-0.5-0.8-1.4-0.7-1.9-0.5L105.9,207.9z"/>
           </g>
         </g>
-        <g id="Motor">
+        <g id="Motor" class="pointer">
           <path onmouseover="this.style.opacity=0.5" onmouseout="this.style.opacity=0" [routerLink]="['../selectView']" class="st17" d="M30,94c0,0,46-56,115-4
             c14-73-14.9-89-58-89C46,1,16,12,30,94z"/>
         </g>
@@ -167,31 +167,31 @@
   
     <div class="right-block">
       <div id="upper_block" class="row s12 blockrow">
-        <div class="big-panel card"  id="fleet_size">
-          <p>10.000
+        <div class="big-panel card contigruen"  id="fleet_size" [routerLink]="['../partView']">
+          <p>{{this.data.Total_cars}}
           <span class="card-label">cars in this fleet</span></p>
         </div>
-        <div class="big-panel card"  id="cars_to_check">
-          <p>9
+        <div class="big-panel card contirot"  id="cars_to_check" [routerLink]="['../partView']">
+          <p>{{this.data.Critical_cars}}
             <span class="card-label">cars need your attention</span></p></div>
       </div>
   
       <div class="row s11 blockrow lower_block">
         <div class="small-panel card" id="vehicle_speed">
-          <p>400 X
-            <span class="card-label">Thing1</span></p>
+          <p>{{this.data.Vehicle_Speed | number:'1.2-4'}} km/h
+            <span class="card-label">Vehicle speed</span></p>
         </div>
         <div class="small-panel card" id="engine_speed">
-          <p>2000 %
-            <span class="card-label">Thing2</span></p>
+          <p>{{this.data.Engine_Speed | number:'1.0-0'}}RPM
+            <span class="card-label">Engine_Speed</span></p>
           </div>
         <div class="small-panel card" id="engine_load">
-          <p>63 apm
-              <span class="card-label">Thing3</span></p>
+          <p>{{this.data.MAF_Before_Compressor | number: '1.2-4'}}kg/h
+              <span class="card-label">Engine load</span></p>
           </div>
         <div class="small-panel card" id="vehicle_temp">
-          <p>0,77 G
-              <span class="card-label">Thing3</span></p>
+          <p>{{this.data.Ambiant_Temperature | number: '1.0-0'}}°C
+              <span class="card-label">Ambiant Temperature</span></p>
           </div>
       </div>
     </div>
