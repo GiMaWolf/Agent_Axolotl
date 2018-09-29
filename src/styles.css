@@ -134,8 +134,11 @@ color: #ffa500
 
 .footerlink{
     color: silver;
+    white-space: nowrap;
 }
 
 .footer-copyright{
-    float: right;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
 }
