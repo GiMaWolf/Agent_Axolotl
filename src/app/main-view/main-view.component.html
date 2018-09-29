@@ -167,29 +167,29 @@
   
     <div class="right-block">
       <div id="upper_block" class="row s12 blockrow">
-        <div class="big-panel card contigruen"  id="fleet_size" [routerLink]="['../partView']">
+        <div class="big-panel card contigrau pointer"  id="fleet_size" [routerLink]="['../partView']">
           <p>{{this.data.Total_cars}}
           <span class="card-label">cars in this fleet</span></p>
         </div>
-        <div class="big-panel card contirot"  id="cars_to_check" [routerLink]="['../partView']">
+        <div class="big-panel card contirot pointer"  id="cars_to_check" [routerLink]="['../partView']">
           <p>{{this.data.Critical_cars}}
             <span class="card-label">cars need your attention</span></p></div>
       </div>
   
       <div class="row s11 blockrow lower_block">
-        <div class="small-panel card" id="vehicle_speed">
+        <div class="small-panel card contigrau pointer" id="vehicle_speed">
           <p>{{this.data.Vehicle_Speed | number:'1.2-4'}} km/h
             <span class="card-label">&empty; Vehicle speed</span></p>
         </div>
-        <div class="small-panel card" id="engine_speed">
+        <div class="small-panel card contigrau pointer" id="engine_speed">
           <p>{{this.data.Engine_Speed | number:'1.0-0'}} RPM
             <span class="card-label">&empty; Engine_Speed</span></p>
           </div>
-        <div class="small-panel card" id="engine_load">
+        <div class="small-panel card contigrau pointer" id="engine_load">
           <p>{{this.data.MAF_Before_Compressor | number: '1.2-4'}} kg/h
               <span class="card-label">&empty; Engine load</span></p>
           </div>
-        <div class="small-panel card" id="vehicle_temp">
+        <div class="small-panel card contigrau pointer" id="vehicle_temp">
           <p>{{this.data.Ambiant_Temperature | number: '1.0-0'}} °C
               <span class="card-label">&empty; Ambiant Temperature</span></p>
           </div>

@@ -44,28 +44,7 @@ a.brand-logo{
     margin-bottom: 20px;
 }
 
-/*********************
-*** COLORS
-**********************/
 
-.contirange{
-    color: #ffa500;
-    font-weight: 600;
-}
-
-.grau{
-    background-color: #737373;
-}
-
-.contigruen {
-    background-color: #2db928;
-    cursor: pointer;
-}
-
-.contirot {
-    background-color: #ff2d37;
-    cursor: pointer;
-}
 
 /*********************
 *** SEITENAUFBAU
@@ -144,4 +123,27 @@ p.small-panel{
     margin: 0;
     font-weight: 800;
     color: #ffa500
+}
+
+/*********************
+*** COLORS
+**********************/
+
+.contirange{
+    color: #ffa500;
+    font-weight: 600;
+}
+
+.contigrau{
+    background-color: #969696;
+}
+
+.contigruen {
+    background-color: #2db928;
+    cursor: pointer;
+}
+
+.contirot {
+    background-color: #ff2d37;
+    cursor: pointer;
 }
