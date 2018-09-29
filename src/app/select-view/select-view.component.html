@@ -193,19 +193,19 @@
         <p class="group-card-title">Pump Control</p>
         <div class="row s11 blockrow lower_block grouping-card">
             <div class="small-panel card" id="vehicle_speed">
-              <p>400 X
+              <p>{{this.data.Engine_Speed/2 | number:'1.0-0'}}
                 <span class="card-label">Pump Speed</span></p>
             </div>
             <div class="small-panel card" id="engine_speed">
-              <p>2000 %
+              <p>{{this.data.Fuel_Pump_Delivery | number:'1.2-2'}} mg/s
                 <span class="card-label">Fuel Mass Delivery</span></p>
               </div>
             <div class="small-panel card" id="engine_load">
-              <p>63 apm
+              <p>{{this.data.Fuel_Pressure| number:'1.0-0'}}
                   <span class="card-label">Fuel Pressure</span></p>
               </div>
             <div class="small-panel card" id="vehicle_temp">
-              <p>0,77 G
+              <p>{{this.data.Fuel_Temperature_In_Rail | number:'1.0-0'}}°C
                   <span class="card-label">Fuel Temperature</span></p>
               </div>
           </div>
