@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, AfterViewChecked } from '@angular/core';
 import { RestService } from '../shared/rest.service';
 
 import * as Highcharts from 'highcharts/highstock';
 import { ActivatedRoute } from '@angular/router';
 import { log } from 'util';
+
+declare var $: any;
 
 
 @Component({
@@ -11,7 +13,7 @@ import { log } from 'util';
   templateUrl: './compare-view.component.html',
   styleUrls: ['./compare-view.component.css']
 })
-export class CompareViewComponent implements OnInit {
+export class CompareViewComponent implements OnInit, AfterViewChecked {
 
   constructor(private restService:RestService, private activatedRoute: ActivatedRoute) { }
 
@@ -83,6 +85,10 @@ export class CompareViewComponent implements OnInit {
     };
     console.log(this.specialChartOption);
     
+  }
+
+  ngAfterViewChecked(){    
+    $('.highcharts-input-group').hide()
   }
 
 }
