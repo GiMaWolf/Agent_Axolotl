@@ -16,10 +16,13 @@
 }
 
 .critical{
-    background-color: #ff2d37;
+    background-color: #ff2d37b1;
     color: white;
 }
-
+.critical_bg{
+    background-color: #ff2d3734;
+    color: black;
+}
 .criticalCheckbox{
     border: 2px solid white !important;
 }

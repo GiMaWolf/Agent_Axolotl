@@ -15,7 +15,9 @@ export class PartViewComponent implements OnInit {
 
   ngOnInit() {
     this.restService.getPartViewData().subscribe(response => {
+
       this.vehicles = response;
+      this.vehicles.sort((a,b) => (a.Critical > b.Critical) ?((b.Critical > a.Critical) ? -1 : 0): 1);
       this.vehicles.forEach(element => {
         element.compare = false;
       });      
