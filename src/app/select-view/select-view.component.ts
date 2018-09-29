@@ -9,6 +9,7 @@ import { RestService } from '../shared/rest.service';
 })
 export class SelectViewComponent implements OnInit {
   data;
+  partname;
   constructor(private restService:RestService) { }
 
   ngOnInit() {
@@ -17,6 +18,7 @@ export class SelectViewComponent implements OnInit {
       this.data = response
       console.log(this.data)
     })
+    this.partname="";
   }
 
 }
