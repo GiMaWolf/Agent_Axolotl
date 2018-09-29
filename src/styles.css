@@ -125,6 +125,10 @@ p.small-panel{
     color: #ffa500
 }
 
+.threecards{
+ width: 30%;
+}
+
 /*********************
 *** COLORS
 **********************/
@@ -147,3 +151,4 @@ p.small-panel{
     background-color: #ff2d37;
     cursor: pointer;
 }
+
