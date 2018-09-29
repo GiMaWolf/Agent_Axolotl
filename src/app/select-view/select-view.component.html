@@ -194,19 +194,27 @@
         <div class="row s11 blockrow lower_block grouping-card">
             <div class="small-panel card" id="vehicle_speed">
               <p>{{this.data.Engine_Speed/2 | number:'1.0-0'}}
-                <span class="card-label">Pump Speed</span></p>
+                <span class="card-label">Pump Speed</span>
+                <img class="graph-img" src="assets/img/graph2.png"/>
+              </p>
             </div>
             <div class="small-panel card" id="engine_speed">
               <p>{{this.data.Fuel_Pump_Delivery | number:'1.2-2'}} mg/s
-                <span class="card-label">Fuel Mass Delivery</span></p>
+                <span class="card-label">Fuel Mass Delivery</span>
+                <img class="graph-img" src="assets/img/graph3.png"/>
+              </p>
               </div>
             <div class="small-panel card" id="engine_load">
               <p>{{this.data.Fuel_Pressure| number:'1.0-0'}}
-                  <span class="card-label">Fuel Pressure</span></p>
+                  <span class="card-label">Fuel Pressure</span>
+                  <img class="graph-img" src="assets/img/graph1.png"/>
+                </p>
               </div>
             <div class="small-panel card" id="vehicle_temp">
               <p>{{this.data.Fuel_Temperature_In_Rail | number:'1.0-0'}}°C
-                  <span class="card-label">Fuel Temperature</span></p>
+                  <span class="card-label">Fuel Temperature</span>
+                  <img class="graph-img" src="assets/img/graph4.png"/>
+                </p>
               </div>
           </div>
 
