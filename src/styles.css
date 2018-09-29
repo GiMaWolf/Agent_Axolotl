@@ -1,4 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+/*********************
+*** GENERAL
+**********************/
+
+html{
+    background-image: linear-gradient(to bottom right, silver, white);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+}
 
 p {
     font-family: 'Open Sans', sans-serif !important;
@@ -20,22 +29,47 @@ a.brand-logo{
     padding-left: 55px;
 }
 
+.pointer{
+    cursor: pointer;
+}
+
+.footerlink{
+    color: silver;
+    white-space: nowrap;
+}
+
+.footer-copyright{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+/*********************
+*** COLORS
+**********************/
+
 .contirange{
     color: #ffa500;
     font-weight: 600;
 }
 
-html{
-    background-image: linear-gradient(to bottom right, silver, white);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100%;
+.grau{
+    background-color: #737373;
 }
 
+.contigruen {
+    background-color: #2db928;
+    cursor: pointer;
+}
 
+.contirot {
+    background-color: #ff2d37;
+    cursor: pointer;
+}
 
-
-/*dontknow*/
+/*********************
+*** SEITENAUFBAU
+**********************/
 .content{
     display:flex;
     margin: 50px;
@@ -80,6 +114,7 @@ html{
     display: flex;
     justify-content: center;
 }
+
 .lower_block {
     display: flex;
     justify-content: space-between;
@@ -105,40 +140,8 @@ p.small-panel{
     justify-content: space-between;
 }
 
-/*
 .group-card-title{
-    transform: rotate(270deg);
-    transform-origin: 0% 24%;
-    z-index: -1;
-}*/
-
-.group-card-title{
-margin: 0;
-font-weight: 800;
-color: #ffa500
-}
-
-.contigruen {
-    background-color: #2db928;
-    cursor: pointer;
-}
-
-.contirot {
-    background-color: #ff2d37;
-    cursor: pointer;
-}
-
-.pointer{
-    cursor: pointer;
-}
-
-.footerlink{
-    color: silver;
-    white-space: nowrap;
-}
-
-.footer-copyright{
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 20px;
+    margin: 0;
+    font-weight: 800;
+    color: #ffa500
 }
