@@ -27,6 +27,8 @@ a.brand-logo{
 
 html{
     background-image: linear-gradient(to bottom right, silver, white);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100%;
 }
 
@@ -128,4 +130,12 @@ color: #ffa500
 
 .pointer{
     cursor: pointer;
+}
+
+.footerlink{
+    color: silver;
+}
+
+.footer-copyright{
+    float: right;
 }
