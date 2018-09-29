@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestService } from '../shared/rest.service';
 
 @Component({
   selector: 'app-main-view',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-view.component.css']
 })
 export class MainViewComponent implements OnInit {
-
-  constructor() { }
+  data;
+  constructor(private restService:RestService) { }
 
   ngOnInit() {
+    this.data;
+    this.restService.getMainViewData().subscribe(response => {
+      this.data = response
+      console.log(this.data)
+    })
   }
 
 }

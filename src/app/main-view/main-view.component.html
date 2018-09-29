@@ -168,30 +168,30 @@
     <div class="right-block">
       <div id="upper_block" class="row s12 blockrow">
         <div class="big-panel card"  id="fleet_size">
-          <p>10.000
+          <p>{{this.data.Total_cars}}
           <span class="card-label">cars in this fleet</span></p>
         </div>
         <div class="big-panel card"  id="cars_to_check">
-          <p>9
+          <p>{{this.data.Critical_cars}}
             <span class="card-label">cars need your attention</span></p></div>
       </div>
   
       <div class="row s11 blockrow lower_block">
         <div class="small-panel card" id="vehicle_speed">
-          <p>400 X
-            <span class="card-label">Thing1</span></p>
+          <p>{{this.data.Vehicle_Speed | number:'1.2-4'}} km/h
+            <span class="card-label">Vehicle speed</span></p>
         </div>
         <div class="small-panel card" id="engine_speed">
-          <p>2000 %
-            <span class="card-label">Thing2</span></p>
+          <p>{{this.data.Engine_Speed | number:'1.0-0'}}RPM
+            <span class="card-label">Engine_Speed</span></p>
           </div>
         <div class="small-panel card" id="engine_load">
-          <p>63 apm
-              <span class="card-label">Thing3</span></p>
+          <p>{{this.data.MAF_Before_Compressor | number: '1.2-4'}}kg/h
+              <span class="card-label">Engine load</span></p>
           </div>
         <div class="small-panel card" id="vehicle_temp">
-          <p>0,77 G
-              <span class="card-label">Thing3</span></p>
+          <p>{{this.data.Ambiant_Temperature | number: '1.0-0'}}°C
+              <span class="card-label">Ambiant Temperature</span></p>
           </div>
       </div>
     </div>
