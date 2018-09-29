@@ -197,7 +197,7 @@
       </div>
       <div class="card">
         
-        <table class="responsive-table">
+        <table class="responsive-table centered">
             <thead>
               <tr>
                   <th>VIN</th>
@@ -210,12 +210,12 @@
             </thead>
     
             <tbody>
-              <tr *ngFor="let vehicle of vehicles" [ngClass]="{'critical': (vehicle.Critical == 1)}">
+              <tr *ngFor="let vehicle of vehicles" [ngClass]="{'critical_bg': (vehicle.Critical == 1)}" >
                 <td>{{vehicle.VIN}}</td>
-                <td>{{vehicle.Fuel_Pump_Delivery | number:'1.2-4'}}</td>
-                <td>{{vehicle.Fuel_Temperature_In_Rail | number:'1.2-4'}}</td>
-                <td>{{vehicle.Engine_Speed | number:'1.2-4'}}</td>
-                <td>{{vehicle.Fuel_Pressure | number:'1.2-4'}}</td>
+                <td [ngClass]="{'critical': (vehicle.Critical_Fuel_Pump_Delivery == 1)}">{{vehicle.Fuel_Pump_Delivery | number:'1.2-4'}}</td>
+                <td [ngClass]="{'critical': (vehicle.Critical_Fuel_Temperature_In_Rail == 1)}">{{vehicle.Fuel_Temperature_In_Rail | number:'1.2-4'}}</td>
+                <td [ngClass]="{'critical': (vehicle.Critical_Engine_Speed == 1)}">{{vehicle.Engine_Speed | number:'1.2-4'}}</td>
+                <td [ngClass]="{'critical': (vehicle.Critical_Fuel_Pressure == 1)}">{{vehicle.Fuel_Pressure | number:'1.2-4'}}</td>
                 <td> 
                     <form action="#">
                         <p>
