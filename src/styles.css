@@ -27,6 +27,9 @@ a.brand-logo{
 
 html{
     background-image: linear-gradient(to bottom right, silver, white);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
 }
 
 
@@ -113,4 +116,29 @@ p.small-panel{
 margin: 0;
 font-weight: 800;
 color: #ffa500
+}
+
+.contigruen {
+    background-color: #2db928;
+    cursor: pointer;
+}
+
+.contirot {
+    background-color: #ff2d37;
+    cursor: pointer;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.footerlink{
+    color: silver;
+    white-space: nowrap;
+}
+
+.footer-copyright{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
 }

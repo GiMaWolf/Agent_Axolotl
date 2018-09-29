@@ -3,6 +3,7 @@ import { RestService } from '../shared/rest.service';
 
 import * as Highcharts from 'highcharts/highstock';
 import { ActivatedRoute } from '@angular/router';
+import { log } from 'util';
 
 
 @Component({
@@ -17,6 +18,7 @@ export class CompareViewComponent implements OnInit {
   Highcharts = Highcharts;
   dataChartsOptions = [];
   chartConstructor = 'stockChart';
+  specialChartOption;
 
   ngOnInit() {
 
@@ -27,8 +29,10 @@ export class CompareViewComponent implements OnInit {
 
   getData(vehicles){
     this.restService.getComponentDetails(vehicles).subscribe(response => {
+      this.fillSpecialChartOption(response);
       response.forEach(vehicleElement => {
         let chartOptions =  {
+          opened: false,
           name: vehicleElement.vehicle,
           legend: {
             enabled: true,
@@ -47,12 +51,38 @@ export class CompareViewComponent implements OnInit {
             name: key
           }
           series.push(singleDataProperty);
-    
         });
         chartOptions.series = series
         this.dataChartsOptions.push(chartOptions);
       });
     })
+  }
+
+  fillSpecialChartOption(data){
+    let series = [];
+    data.forEach(element_main => {
+      element_main.series.forEach(element => {        
+        let key = Object.keys(element)[0];        
+        let singleDataProperty = {
+          data: element[key],
+          name: element_main.vehicle + "-" + key
+        }
+        series.push(singleDataProperty);
+      });
+    });
+    this.specialChartOption ={
+      opened: false,
+      name: "Sum Chart",
+      legend: {
+        enabled: true,
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+      },
+      series:series
+    };
+    console.log(this.specialChartOption);
+    
   }
 
 }
