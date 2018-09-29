@@ -171,7 +171,7 @@
         <rect x="52" y="15" onmouseover="this.style.backgroundColor=red" class="st19" width="21.9" height="31.5"/>
         <rect x="52" y="50.9" class="st19" width="70" height="14"/>
         
-          <rect x="78.3" y="15"  [routerLink]="['../partView']" (mouseenter)="this.partname='Pump'" (mouseleave)="this.partname=' '" onmouseover="this.style.opacity=0" onmouseout="this.style.opacity=1" class="st21" width="14.9" height="31.5"/>
+          <rect x="78.3" y="15"  [routerLink]="['../partView']" (mouseenter)="this.partname='Pump'" (mouseleave)="this.partname=' '" onmouseover="this.style.opacity=0" onmouseout="this.style.opacity=1" class="st20" width="14.9" height="31.5"/>
         
           <rect x="97.5" y="15" [routerLink]="['../partView']" (mouseenter)="this.partname='Fuel Injector'" (mouseleave)="this.partname=' '" onmouseover="this.style.opacity=0" onmouseout="this.style.opacity=1" class="st21" width="23.6" height="14"/>
         
@@ -198,25 +198,25 @@
     <div class="right-block">
         <p class="group-card-title">Pump Control</p>
         <div class="row s11 blockrow lower_block grouping-card">
-            <div class="small-panel card contirot pointer" id="vehicle_speed" [routerLink]="['../partView']">
+            <div class="small-panel card contirot pointer hoverable" id="vehicle_speed" [routerLink]="['../partView']">
               <p>{{this.data.Engine_Speed/2 | number:'1.0-0'}} RPM
                 <span class="card-label">Pump Speed</span>
                 <img class="graph-img" src="assets/img/graph2.png"/>
               </p>
             </div>
-            <div class="small-panel card pointer" id="engine_speed" [routerLink]="['../partView']">
+            <div class="small-panel card pointer hoverable contigrau" id="engine_speed" [routerLink]="['../partView']">
               <p>{{this.data.Fuel_Pump_Delivery | number:'1.2-2'}} mg/s
                 <span class="card-label">Fuel Mass Delivery</span>
                 <img class="graph-img" src="assets/img/graph3.png"/>
               </p>
               </div>
-            <div class="small-panel card pointer" id="engine_load" [routerLink]="['../partView']">
+            <div class="small-panel card pointer hoverable contigrau" id="engine_load" [routerLink]="['../partView']">
               <p>{{this.data.Fuel_Pressure| number:'1.0-0'}} PSI
                   <span class="card-label">Fuel Pressure</span>
                   <img class="graph-img" src="assets/img/graph1.png"/>
                 </p>
               </div>
-            <div class="small-panel card pointer" id="vehicle_temp" [routerLink]="['../partView']">
+            <div class="small-panel card pointer hoverable contigrau" id="vehicle_temp" [routerLink]="['../partView']">
               <p>{{this.data.Fuel_Temperature_In_Rail | number:'1.0-0'}} °C
                   <span class="card-label">Fuel Temperature</span>
                   <img class="graph-img" src="assets/img/graph4.png"/>
@@ -226,29 +226,27 @@
 
           <p class="group-card-title">Injector Control</p>
           <div class="row s11 blockrow lower_block grouping-card">
-              <div class="small-panel card pointer threecards" id="vehicle_speed" [routerLink]="['../partView']">
+              <div class="small-panel card pointer threecards hoverable contigrau" id="vehicle_speed" [routerLink]="['../partView']">
                 <p>400 PSI
                   <span class="card-label">Fuel Pressure</span>
                   <img class="graph-img" src="assets/img/graph5.png"/>
                 </p>
               </div>
-              <div class="small-panel card pointer threecards" id="engine_speed" [routerLink]="['../partView']">
+              <div class="small-panel card pointer threecards hoverable contigrau" id="engine_speed" [routerLink]="['../partView']">
                 <p>150 °C
                   <span class="card-label">Fuel Temperature</span>
                   <img class="graph-img" src="assets/img/graph7.png"/>
                 </p>
                 </div> 
-              <div class="small-panel card pointer threecards" id="engine_load" [routerLink]="['../partView']">
+              <div class="small-panel card pointer threecards hoverable contigrau" id="engine_load" [routerLink]="['../partView']">
                 <p>63
                     <span class="card-label">Injection Pulse</span>
                     <img class="graph-img" src="assets/img/graph6.png"/>
                   </p>
                 </div>
             </div>
-
-
     </div>
-  
+
   </div>
       
    
