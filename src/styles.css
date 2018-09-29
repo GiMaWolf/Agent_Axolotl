@@ -114,3 +114,17 @@ margin: 0;
 font-weight: 800;
 color: #ffa500
 }
+
+.contigruen {
+    background-color: #2db928;
+    cursor: pointer;
+}
+
+.contirot {
+    background-color: #ff2d37;
+    cursor: pointer;
+}
+
+.pointer{
+    cursor: pointer;
+}
