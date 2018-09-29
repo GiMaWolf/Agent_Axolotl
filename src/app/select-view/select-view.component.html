@@ -1,6 +1,8 @@
 <div class="content">
 
     <div id="left-block" align="left">
+        <h5 style="text-align:center; height:20px;font-size: 20px;color:#737373;font-weight:800" >{{this.partname}}</h5>
+
       <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 163 307" style="enable-background:new 0 0 163 307;" xml:space="preserve" width="300">
@@ -169,15 +171,15 @@
         <rect x="52" y="15" onmouseover="this.style.backgroundColor=red" class="st19" width="21.9" height="31.5"/>
         <rect x="52" y="50.9" class="st19" width="70" height="14"/>
         
-          <rect x="78.3" y="15" [routerLink]="['../partView']" onmouseover="this.style.opacity=0" onmouseout="this.style.opacity=1" class="st20" width="14.9" height="31.5"/>
+          <rect x="78.3" y="15"  [routerLink]="['../partView']" (mouseenter)="this.partname='Pump'" (mouseleave)="this.partname=' '" onmouseover="this.style.opacity=0" onmouseout="this.style.opacity=1" class="st21" width="14.9" height="31.5"/>
         
-          <rect x="97.5" y="15" [routerLink]="['../partView']" onmouseover="this.style.opacity=0" onmouseout="this.style.opacity=1" class="st21" width="23.6" height="14"/>
+          <rect x="97.5" y="15" [routerLink]="['../partView']" (mouseenter)="this.partname='Fuel Injector'" (mouseleave)="this.partname=' '" onmouseover="this.style.opacity=0" onmouseout="this.style.opacity=1" class="st21" width="23.6" height="14"/>
         
-          <rect x="97.5" y="33.4" [routerLink]="['../partView']" onmouseover="this.style.opacity=0" onmouseout="this.style.opacity=1" class="st21" width="23.6" height="14"/>
+          <rect x="97.5" y="33.4" [routerLink]="['../partView']" (mouseenter)="this.partname='Turbocharger'" (mouseleave)="this.partname=' '" onmouseover="this.style.opacity=0" onmouseout="this.style.opacity=1" class="st21" width="23.6" height="14"/>
         
-          <rect x="52" y="15" [routerLink]="['../partView']" onmouseover="this.style.opacity=0" onmouseout="this.style.opacity=1" class="st21" width="21.9" height="31.5"/>
+          <rect x="52" y="15" [routerLink]="['../partView']" (mouseenter)="this.partname='ECU Controller'" (mouseleave)="this.partname=' '" onmouseover="this.style.opacity=0" onmouseout="this.style.opacity=1" class="st21" width="21.9" height="31.5"/>
         
-          <rect x="52" y="50.9" [routerLink]="['../partView']" onmouseover="this.style.opacity=0" onmouseout="this.style.opacity=1" class="st21" width="70" height="14"/>
+          <rect x="52" y="50.9" [routerLink]="['../partView']" (mouseenter)="this.partname='Controller'" (mouseleave)="this.partname=' '" onmouseover="this.style.opacity=0" onmouseout="this.style.opacity=1" class="st21" width="70" height="14"/>
       </g>
       <g id="Innenlieben">
       </g>
